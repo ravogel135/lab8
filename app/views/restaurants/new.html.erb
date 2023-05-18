@@ -1,0 +1,19 @@
+<div class="container mt-5">
+  <h1 class="text-center mb-4">New Restaurant</h1>
+
+  <div class="card">
+    <div class="card-body">
+      <div class="text-center">
+        <%= render "form", restaurant: @restaurant %>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center mt-4">
+    <%= link_to "Back to restaurants", restaurants_path, class: "btn btn-secondary" %>
+  </div>
+</div>
+
+
+
+

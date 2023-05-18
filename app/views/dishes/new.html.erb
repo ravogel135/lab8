@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header text-center">
+      <h1 class="card-title">New Dish</h1>
+    </div>
+    <div class="card-body text-center">
+      <%= render "form", dish: @dish %>
+    </div>
+    <div class="card-footer text-center">
+      <%= link_to "Back to dishes", dishes_path, class: "btn btn-secondary" %>
+    </div>
+  </div>
+</div>
+

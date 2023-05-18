@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="alert alert-success mt-4" role="alert">
+    <%= notice %>
+  </div>
+
+  <div class="mt-5">
+    <h1 class="text-center mb-4">Items</h1>
+
+    <div id="items" class="row">
+      <% @items.each do |item| %>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <%= render item %>
+              <p class="text-muted"><span style="color: #000;">Restaurant:</span> <span style="color: #000;"><%= item.restaurant.name %></span></p>
+              <p class="text-muted"><span style="color: #000;">Dish:</span> <span style="color: #000;"><%= item.dish.name %></span></p>
+            </div>
+            <div class="card-footer text-center">
+              <%= link_to "Show this item", item, class: "btn btn-primary" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center mt-5">
+    <%= link_to "New item", new_item_path, class: "btn btn-success" %>
+  </div>
+</div>
+
+
+
+
+

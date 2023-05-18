@@ -1,0 +1,33 @@
+<!-- Añadimos un contenedor general con estilo -->
+<div class="container">
+  <!-- Aquí se mostrará la notificación con un estilo más agradable -->
+  <% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+  <% end %>
+
+  <!-- Título con estilo -->
+  <h1 class="text-center">Dishes</h1>
+
+  <!-- Contenedor para los platos -->
+  <div id="dishes" class="row">
+    <% @dishes.each do |dish| %>
+      <!-- Cada plato se muestra en su propia tarjeta con un estilo agradable -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <div class="card-body">
+            <%= render dish %>
+            <p class="text-center">
+              <%= link_to "Show this dish", dish, class: "btn btn-primary" %>
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <!-- Botón para añadir un nuevo plato con estilo -->
+  <div class="text-center mt-4">
+    <%= link_to "New dish", new_dish_path, class: "btn btn-success" %>
+  </div>
+</div>
+

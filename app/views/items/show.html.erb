@@ -1,0 +1,25 @@
+<div class="container mt-5">
+  <div class="alert alert-success" role="alert">
+    <%= notice %>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <h1 class="card-title text-center">Item Details</h1>
+    </div>
+    <div class="card-body">
+      <div class="text-center">
+        <%= render @item %>
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="d-flex justify-content-between">
+        <%= link_to "Edit this item", edit_item_path(@item), class: "btn btn-primary" %>
+        <%= link_to "Back to items", items_path, class: "btn btn-secondary" %>
+        <%= button_to "Destroy this item", @item, method: :delete, data: { confirm: "Are you sure you want to delete this item?" }, class: "btn btn-danger", form_class: "d-inline-block" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+

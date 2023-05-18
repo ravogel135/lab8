@@ -1,0 +1,15 @@
+<div class="container">
+  <h1 class="text-center">Editing dish</h1>
+
+  <div class="form-container text-center">
+    <%= render "form", dish: @dish %>
+  </div>
+
+  <div class="nav-links text-center mt-4">
+    <%= link_to "Show this dish", @dish, class: "btn btn-info mr-2" %> |
+    <%= link_to "Back to dishes", dishes_path, class: "btn btn-secondary ml-2" %>
+  </div>
+</div>
+
+
+
